@@ -1,18 +1,33 @@
 body {
+	background-color: #eee;
+	padding: 0;
+	margin: 0;
+}
 
+footer {
+	background-color: #fff;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+   	font-size: 16px;
+   	padding: 30px 15px;
+   	margin-top: 60px;
+   	text-align: center;
+   	color: #333;
 }
 
 #container {
-	max-width: 1100px;
+	max-width: 1200px;
 	width: 100%;
 	display: block;
 	margin: 0 auto;
+	padding-top: 30px;
 }
 
 /* entire container, keeps perspective */
 .flip-container {
 	-webkit-perspective: 1000;
 	        perspective: 1000;
+
 }
 
 /* flip the pane when hovered */
@@ -22,13 +37,18 @@ body {
 }
 
 .flip-container, .front, .back {
- 	width: 150px;
- 	height: 230px;
+	/*768 × 1063*/
+ 	width: 256px;
+ 	height: 354px;
+}
+
+.front, .back {
+ 	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 
 .front img, .back img{
-	margin-left: -15px;
-	margin-top: -15px;
+	width: 100%;
+	height: 100%;
 }
 
 /* flip speed goes here */
